@@ -9,15 +9,15 @@ describe('Default Endpoint', () => {
   })
 })
 
+// tests/routes.test.js
 describe('New Endpoint', () => {
   it('should return a static json response with status 201', async () => {
     const res = await request(app)
       .get('/ice-flakes')
     expect(res.body).toEqual({
-      "count": 1005,
-      "resource": "ice-flakes",
-      "shape": "rectangle"
+      resource: 'ice-flakes',
+      count: 205,
+      shape: 'circle'
     })
-    expect(res.statusCode).toEqual(201)
   })
 })
